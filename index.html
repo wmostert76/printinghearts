@@ -5,7 +5,7 @@
     <title>Printing❤️Hearts</title>
     <link rel="shortcut icon" href="/assets/LOGO PNG WITTE ACHTERGROND.png" type="image/x-icon"/>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="/assets/style.css" rel="stylesheet">
+    <!-- Removed link to style.css since it's merged into the style tag below -->
     <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
     <style>
@@ -15,6 +15,34 @@
             color: white; /* Change text color on hover */
             border-radius: 5px; /* Rounded corners */
             padding: 10px; /* Padding */
+        }
+        
+        /* Merged styles from style.css */
+        body {
+            background: url('/assets/wallpaper.jpg');
+            background-repeat: no-repeat;
+            background-position: 0 100px;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Signika', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'Playlist-Script';
+            src:  url('assets/Playlist-Script.ttf.woff') format('woff'),
+            url('assets/Playlist-Script.ttf.svg#Playlist-Script') format('svg'),
+            url('assets/Playlist-Script.ttf.eot'),
+            url('assets/Playlist-Script.eot?#iefix') format('embedded-opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .logo-text {
+            font-family: 'Playlist-Script';
+            color: black;
+        }
+
+        .cryptedmail:after {
+            content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
         }
     </style>
 </head>
