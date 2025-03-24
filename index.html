@@ -5,46 +5,9 @@
     <title>Printing❤️Hearts</title>
     <link rel="shortcut icon" href="/assets/LOGO PNG WITTE ACHTERGROND.png" type="image/x-icon"/>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <!-- Removed link to style.css since it's merged into the style tag below -->
+    <link href="/assets/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.0/dist/alpine.min.js" defer></script>
-    <style>
-        /* Add hover effect for menu items */
-        .menu-item:hover, .menu-item.highlight {
-            background-color: #f56565; /* Change background color on hover */
-            color: white; /* Change text color on hover */
-            border-radius: 5px; /* Rounded corners */
-            padding: 10px; /* Padding */
-        }
-        
-        /* Merged styles from style.css */
-        body {
-            background: url('/assets/wallpaper.jpg');
-            background-repeat: no-repeat;
-            background-position: 0 100px;
-            background-attachment: fixed;
-            background-size: cover;
-            font-family: 'Signika', sans-serif;
-        }
-
-        @font-face {
-            font-family: 'Playlist-Script';
-            src:  url('assets/Playlist-Script.ttf.woff') format('woff'),
-            url('assets/Playlist-Script.ttf.svg#Playlist-Script') format('svg'),
-            url('assets/Playlist-Script.ttf.eot'),
-            url('assets/Playlist-Script.eot?#iefix') format('embedded-opentype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        .logo-text {
-            font-family: 'Playlist-Script';
-            color: black;
-        }
-
-        .cryptedmail:after {
-            content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
-        }
-    </style>
 </head>
 <body class="bg-grey-light bg-opacity-75 md:text-5xl lg:text-xl">
 
@@ -57,32 +20,37 @@
             id="nav-content">
         <button class="fixed top-0 right-0 m-4" @click.prevent="menu = ! menu">Sluiten</button>
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="menu-item">
+            <li class="">
+                <a class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
+                   href="#aanmelden"
+                   @click="menu = ! menu">Aanmelden</a>
+            </li>
+            <li class="">
                 <a class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
                    href="#reacties"
                    @click="menu = ! menu">Reacties</a>
             </li>            
-            <li class="menu-item">
+            <li class="">
                 <a class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
                    href="#informatie"
                    @click="menu = ! menu">Informatie</a>
             </li>
-            <li class="menu-item">
+            <li class="">
                 <a class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
                    href="#locatie"
                    @click="menu = ! menu">Locatie</a>
             </li>
-            <li class="menu-item">
+            <li class="">
                 <a class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
                    href="#programma"
                    @click="menu = ! menu">Programma</a>
             </li>
-            <li class="menu-item">
+            <li class="">
                 <a class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
                    href="#visie"
                    @click="menu = ! menu">Visie</a>
             </li>
-            <li class="menu-item">
+            <li class="">
                 <a class="inline-block text-grey-dark no-underline hover:text-grey-lighter hover:text-underline py-2 px-4"
                    href="#contact"
                    @click="menu = ! menu">Contact</a>
@@ -102,13 +70,10 @@
             </a>
         </div>
 
-        <div class="block lg:hidden flex items-center">
-            <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2 menu-item highlight"
-               href="https://docs.google.com/forms/d/e/1FAIpQLSfL-f755tZWWE_c66tXEYHmdnsblob1Jf5vKJBPmudIX3FqjA/closedform"
-               target="_blank">Aanmelden</a>
+        <div class="block lg:hidden mr-3">
             <button id="nav-toggle"
                     @click.prevent="menu = ! menu"
-                    class="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-white hover:border-white ml-2">
+                    class="flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-white hover:border-white">
                 <svg class="fill-current h-10" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
                     Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
@@ -116,39 +81,41 @@
             </button>
         </div>
 
-        <div class="hidden lg:flex items-center">
+        <div
+            class="w-full flex-grow lg:flex hidden lg:items-center lg:w-auto lg:block pt-6 lg:pt-0 text-xl lg:mr-8"
+        >
             <ul class="list-reset flex justify-end flex-1 items-center">
-                <li class="menu-item highlight">
+                <li class="">
                     <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2"
-                       href="https://docs.google.com/forms/d/e/1FAIpQLSfL-f755tZWWE_c66tXEYHmdnsblob1Jf5vKJBPmudIX3FqjA/closedform"
-                       target="_blank">Aanmelden</a>
+                       href="#aanmelden"
+                    >Aanmelden</a>
                 </li>
-                <li class="menu-item">
+                <li class="">
                     <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2"
                        href="#reacties"
                     >Reacties</a>
                 </li>                
-                <li class="menu-item">
+                <li class="">
                     <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2"
                         href="#informatie"
                     >Informatie</a> 
                 </li>
-                <li class="menu-item">
+                <li class="">
                     <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2"
                         href="#locatie"
                     >Locatie</a>
                 </li>
-                <li class="menu-item">
+                <li class="">
                     <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2"
                         href="#programma"
                     >Programma</a>
                 </li>
-                <li class="menu-item">
+                <li class="">
                     <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2"
                        href="#visie"
                     >Visie</a>
-                </li>          
-                <li class="menu-item">
+                </li>            
+                <li class="">
                     <a class="inline-block text-grey-dark no-underline hover:text-grey-500 hover:text-underline py-2 px-2"
                        href="#contact"
                     >Contact</a>
@@ -163,7 +130,7 @@
         <a name="welkom"></a>
         <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Welkom</div>
         <div class="mb-4">
-            Wat leuk dat je onze website komt bezoeken! Naast dat je je kunt aanmelden voor het toerustingsweekend, vind je hier
+            Wat leuks dat je onze website komt bezoeken! Naast dat je je kunt aanmelden voor het toerustingsweekend, vind je hier
             meer achtergrond informatie over onze mooie organisatie, de visie, het programma en de locatie.
         </div>
 
@@ -427,6 +394,8 @@
                 de kleinkinderen. We zien er naar uit om jullie
                 te ontmoeten!"
             </div>
+
+        </div>
 
         <a name="contact"></a>
         <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Contact</div>
