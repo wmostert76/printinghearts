@@ -38,49 +38,49 @@
     <div
             x-cloak
             x-show.transition="menu"
-            class="fixed top-0 z-50 left-0 h-screen text-xl md:text-2xl text-center pt-16 bg-opacity-90 text-white bg-black w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block lg:pt-0"
+            class="fixed top-0 z-50 left-0 h-screen text-xl md:text-2xl text-center pt-16 bg-opacity-95 text-white bg-black w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block lg:pt-0"
             id="nav-content">
         <button class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg" @click.prevent="menu = ! menu">Sluiten</button>
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="menu-item">
-                <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
+                <a class="inline-block text-white font-semibold no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
                    href="#reacties"
                    @click="menu = ! menu">Reacties</a>
             </li>            
             <li class="menu-item">
-                <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
+                <a class="inline-block text-white font-semibold no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
                    href="#informatie"
                    @click="menu = ! menu">Informatie</a>
             </li>
             <li class="menu-item">
-                <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
+                <a class="inline-block text-white font-semibold no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
                    href="#locatie"
                    @click="menu = ! menu">Locatie</a>
             </li>
             <li class="menu-item">
-                <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
+                <a class="inline-block text-white font-semibold no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
                    href="#programma"
                    @click="menu = ! menu">Programma</a>
             </li>
             <li class="menu-item">
-                <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
+                <a class="inline-block text-white font-semibold no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
                    href="#visie"
                    @click="menu = ! menu">Visie</a>
             </li>
             <li class="menu-item">
-                <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
+                <a class="inline-block text-white font-semibold no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
                    href="#folder"
                    @click="menu = ! menu">Folder</a>
             </li>
             <li class="menu-item">
-                <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
+                <a class="inline-block text-white font-semibold no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
                    href="#contact"
                    @click="menu = ! menu">Contact</a>
             </li>
         </ul>
     </div>
 
-    <nav class="z-10 bg-white fixed flex items-center justify-between w-full top-0 left-0 overflow-hidden shadow-md">
+    <nav class="z-10 bg-white fixed flex items-center justify-between w-full top-0 left-0 shadow-md">
         <div class="flex items-center flex-shrink-0 mr-2 md:mr-6">
             <a class="no-underline hover:no-underline" href="https://www.printinghearts.nl">
                 <i class="em em-grinning"></i>
@@ -151,9 +151,9 @@
     </nav>
 
     <!--Container-->
-    <main class="flex-1 overflow-y-auto mx-auto z-0 px-4 lg:px-6 py-4 pt-20 md:pt-28 max-w-6xl">
+    <main class="flex-1 overflow-y-auto mx-auto z-0 px-4 lg:px-6 py-0 pt-16 md:pt-24 max-w-6xl">
 
-        <section id="welkom" class="flex flex-col py-4 md:py-8" data-aos="fade-up">
+        <section id="welkom" class="flex flex-col py-2 md:py-4" data-aos="fade-up">
             <div class="bg-red-700 text-xl md:text-2xl py-2 px-4 text-white uppercase w-auto rounded mb-2 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Welkom
             </div>
@@ -168,7 +168,7 @@
             </div>
         </section>
 
-        <section id="aanmelden" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="aanmelden" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Aanmelden
             </div>
@@ -197,7 +197,7 @@
             </div>
         </section>
             
-        <section id="reacties" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="reacties" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Reacties
             </div>
@@ -283,7 +283,7 @@
             </div>
         </section>
 
-        <section id="informatie" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="informatie" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Informatie
             </div>
@@ -336,7 +336,7 @@
             </div>
         </div>
 
-        <section id="programma" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="programma" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Programma
             </div>
@@ -359,7 +359,7 @@
             </div>
         </section>
 
-        <section id="kosten" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="kosten" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Kosten
             </div>
@@ -390,7 +390,7 @@
             </div>
         </section>
 
-        <section id="visie" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="visie" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Visie
             </div>
@@ -432,7 +432,7 @@
  
         </section>
 
-        <section id="wie-zijn-wij" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="wie-zijn-wij" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Wie zijn wij?
             </div>
@@ -488,7 +488,7 @@
         </div>
         </section>
 
-        <section id="folder" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="folder" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Digitale Folder
             </div>
@@ -505,7 +505,7 @@
             </div>
         </section>
 
-        <section id="contact" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+        <section id="contact" class="flex flex-col py-6 md:py-8" data-aos="fade-up">
             <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Contact
             </div>
