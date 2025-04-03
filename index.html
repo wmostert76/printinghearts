@@ -38,9 +38,9 @@
     <div
             x-cloak
             x-show.transition="menu"
-            class="fixed top-0 z-50 left-0 h-screen text-5xl text-center pt-6 bg-opacity-75 text-white bg-black w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block pt-6 lg:pt-0"
+            class="fixed top-0 z-50 left-0 h-screen text-xl md:text-2xl text-center pt-16 bg-opacity-90 text-white bg-black w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block lg:pt-0"
             id="nav-content">
-        <button class="fixed top-0 right-0 m-4" @click.prevent="menu = ! menu">Sluiten</button>
+        <button class="fixed top-4 right-4 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg" @click.prevent="menu = ! menu">Sluiten</button>
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="menu-item">
                 <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-4"
@@ -80,29 +80,27 @@
         </ul>
     </div>
 
-    <nav class="z-10 bg-white fixed flex items-center justify-between w-full top-0 left-0 overflow-hidden">
-        <div class="flex items-center flex-shrink-0 mr-6">
+    <nav class="z-10 bg-white fixed flex items-center justify-between w-full top-0 left-0 overflow-hidden shadow-md">
+        <div class="flex items-center flex-shrink-0 mr-2 md:mr-6">
             <a class="no-underline hover:no-underline" href="https://www.printinghearts.nl">
                 <i class="em em-grinning"></i>
-                <span class="flex items-center ml-1 text-6xl">
-                        <span class="logo-text mr-2">Printing</span>
-                        <img src="assets/LOGO PNG TRANSPARANTE ACHTERGROND.png" class="h-24 object-cover"/>
-                        <span class="logo-text ml-1">Hearts</span>
+                <span class="flex items-center ml-1 text-3xl md:text-5xl">
+                        <span class="logo-text mr-1 md:mr-2">Printing</span>
+                        <img src="assets/LOGO PNG TRANSPARANTE ACHTERGROND.png" class="h-12 md:h-20 object-cover"/>
+                        <span class="logo-text ml-1 md:mr-2">Hearts</span>
                     </span>
             </a>
         </div>
 
         <div class="block lg:hidden flex items-center">
-            <a class="inline-block text-gray-800 no-underline hover:text-white hover:bg-red-500 hover:rounded hover:p-2 py-2 px-2 menu-item highlight"
-               href="https://docs.google.com/forms/d/e/1FAIpQLSfL-f755tZWWE_c66tXEYHmdnsblob1Jf5vKJBPmudIX3FqjA/closedform"
-               target="_blank">Aanmelden</a>
             <button id="nav-toggle"
                     @click.prevent="menu = ! menu"
-                    class="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-600 hover:text-white hover:border-white ml-2">
-                <svg class="fill-current h-10" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
-                    Menu</title>
+                    class="flex items-center px-3 py-2 border-2 rounded bg-red-600 text-white border-red-700 hover:bg-red-700 hover:border-red-800 ml-2 shadow-md">
+                <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
                 </svg>
+                <span class="ml-1 font-bold text-sm">Menu</span>
             </button>
         </div>
 
@@ -153,25 +151,25 @@
     </nav>
 
     <!--Container-->
-    <main class="flex-1 overflow-y-auto mx-auto z-0 px-4 lg:px-6 py-4 pt-32 md:pt-36 max-w-6xl">
+    <main class="flex-1 overflow-y-auto mx-auto z-0 px-4 lg:px-6 py-4 pt-20 md:pt-28 max-w-6xl">
 
-        <section id="welkom" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="welkom" class="flex flex-col py-4 md:py-8" data-aos="fade-up">
+            <div class="bg-red-700 text-xl md:text-2xl py-2 px-4 text-white uppercase w-auto rounded mb-2 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Welkom
             </div>
-            <div class="mb-8 text-xl md:text-2xl leading-relaxed">
+            <div class="mb-2 text-base md:text-lg leading-relaxed">
                 Wat leuk dat je onze website komt bezoeken! Naast dat je je kunt aanmelden voor het toerustingsweekend, vind je hier
                 meer achtergrond informatie over onze mooie organisatie, de visie, het programma en de locatie.
             </div>
             <div class="flex justify-center">
-                <a href="#aanmelden" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300 text-xl">
+                <a href="#aanmelden" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300 text-lg">
                     Aanmelden
                 </a>
             </div>
         </section>
 
-        <section id="aanmelden" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="aanmelden" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Aanmelden
             </div>
             
@@ -199,12 +197,12 @@
             </div>
         </section>
             
-        <section id="reacties" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="reacties" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Reacties
             </div>
 
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
@@ -285,18 +283,18 @@
             </div>
         </section>
 
-        <section id="informatie" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="informatie" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Informatie
             </div>
             
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
             <div class="lg:py-4 lg:px-6">
-                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Voor wie?</div>
-                <div class="mb-6 text-lg md:text-xl leading-relaxed">
+                <div class="font-bold text-xl md:text-2xl mb-3 text-red-700">Voor wie?</div>
+                <div class="mb-4 text-base md:text-lg leading-relaxed">
                     We willen samen op zoek gaan naar datgene, wat Gods
                     wil is: terug naar de eerste Liefde, de hartsrelatie
                     met Hem. Dat is onze basis, ons fundament. Vanuit
@@ -309,7 +307,7 @@
                     en wil je Hem beter leren kennen? Dan is dit weekend
                     voor jou!
                 </div>
-                <div class="mb-6 text-lg md:text-xl leading-relaxed">
+                <div class="mb-4 text-base md:text-lg leading-relaxed">
                     Naast gebed, onderwijs en meditatieve momenten,
                     vinden we het belangrijk dat iedereen de ruimte krijgt
                     voor een stukje eigen bezinning in de vorm van stille
@@ -338,35 +336,35 @@
             </div>
         </div>
 
-        <section id="programma" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="programma" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Programma
             </div>
             
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
-            <div class="mb-8 lg:py-4 lg:px-6">
-                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Vrijdagavond</div>
-                <div class="mb-6 text-lg md:text-xl leading-relaxed">Na de broodmaaltijd hebben we een gezamenlijk programma
+            <div class="mb-4 lg:py-2 lg:px-6">
+                <div class="font-bold text-xl md:text-2xl mb-3 text-red-700">Vrijdagavond</div>
+                <div class="mb-4 text-base md:text-lg leading-relaxed">Na de broodmaaltijd hebben we een gezamenlijk programma
                     met een creatief moment als inleiding op het thema.
                 </div>
-                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Zaterdag</div>
-                <div class="mb-6 text-lg md:text-xl leading-relaxed">Na het ontbijt is er een inleiding op het thema. Na de overdenking is er ruimte voor een begeleidingsgesprek. Daarna heb je tijd om op je eigen manier God te zoeken. Vervolgens eten we met elkaar een warme maaltijd. Na wat tijd om te ontspannen, gaan we een korte wandeling maken waarbij we een Bijbeltekst gaan overdenken. 's Avonds hebben we een creatieve verwerking van het thema.
+                <div class="font-bold text-xl md:text-2xl mb-3 text-red-700">Zaterdag</div>
+                <div class="mb-4 text-base md:text-lg leading-relaxed">Na het ontbijt is er een inleiding op het thema. Na de overdenking is er ruimte voor een begeleidingsgesprek. Daarna heb je tijd om op je eigen manier God te zoeken. Vervolgens eten we met elkaar een warme maaltijd. Na wat tijd om te ontspannen, gaan we een korte wandeling maken waarbij we een Bijbeltekst gaan overdenken. 's Avonds hebben we een creatieve verwerking van het thema.
                 </div>
-                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Zondag</div>
-                <div class="mb-6 text-lg md:text-xl leading-relaxed">Na het ontbijt hebben we weer tijd om God te zoeken en is er ruimte voor de begeleidingsgesprekken. Aan het einde van de ochtend hebben we met elkaar een meditatief moment. Nadat we weer kunnen genieten van een warme maaltijd met elkaar, hebben we een samenkomst met getuigenissen. Daarna sluiten we het weekend samen af.
+                <div class="font-bold text-xl md:text-2xl mb-3 text-red-700">Zondag</div>
+                <div class="mb-4 text-base md:text-lg leading-relaxed">Na het ontbijt hebben we weer tijd om God te zoeken en is er ruimte voor de begeleidingsgesprekken. Aan het einde van de ochtend hebben we met elkaar een meditatief moment. Nadat we weer kunnen genieten van een warme maaltijd met elkaar, hebben we een samenkomst met getuigenissen. Daarna sluiten we het weekend samen af.
                 </div>
             </div>
         </section>
 
-        <section id="kosten" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="kosten" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Kosten
             </div>
             
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
@@ -392,12 +390,12 @@
             </div>
         </section>
 
-        <section id="visie" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="visie" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Visie
             </div>
             
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
@@ -434,12 +432,12 @@
  
         </section>
 
-        <section id="wie-zijn-wij" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="wie-zijn-wij" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Wie zijn wij?
             </div>
             
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
@@ -490,12 +488,12 @@
         </div>
         </section>
 
-        <section id="folder" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="folder" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Digitale Folder
             </div>
             
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
@@ -507,12 +505,12 @@
             </div>
         </section>
 
-        <section id="contact" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
-            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+        <section id="contact" class="flex flex-col py-8 md:py-12" data-aos="fade-up">
+            <div class="bg-red-700 text-2xl md:text-3xl py-2 px-4 text-white uppercase w-auto rounded mb-4 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
                 Contact
             </div>
             
-            <div class="mt-4 mb-8 object-center">
+            <div class="mt-2 mb-4 object-center">
                 <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
             
