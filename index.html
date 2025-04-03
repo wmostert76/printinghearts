@@ -17,7 +17,7 @@
             padding: 10px; /* Padding */
         }
 
-        /* START: Styles previously in style.css */
+        /* START: Merged and Corrected Styles */
         body {
             /* Using Signika from Google Fonts link above */
             background: url('/assets/wallpaper.jpg');
@@ -25,30 +25,36 @@
             background-position: 0 100px; /* Position below fixed nav */
             background-attachment: fixed;
             background-size: cover;
-            font-family: 'Signika', sans-serif; /* Applied from style.css */
+            font-family: 'Signika', sans-serif;
         }
 
+        /* --- CORRECTED FONT PATHS BELOW --- */
         @font-face {
             font-family: 'Playlist-Script';
-            /* Assuming font files are in the root or an accessible path */
-            /* Adjust paths if necessary, e.g., /assets/fonts/Playlist-Script... */
-            src:  url('Playlist-Script.ttf.woff') format('woff'),
-            url('Playlist-Script.ttf.svg#Playlist-Script') format('svg'),
-            url('Playlist-Script.ttf.eot'),
-            url('Playlist-Script.eot?#iefix') format('embedded-opentype');
+            /* --- IMPORTANT --- */
+            /* MAKE SURE these paths correctly point to your font files! */
+            /* This assumes they are in an '/assets/fonts/' folder */
+            src:  url('/assets/fonts/Playlist-Script.ttf.woff') format('woff'),
+                  url('/assets/fonts/Playlist-Script.ttf.svg#Playlist-Script') format('svg'),
+                  url('/assets/fonts/Playlist-Script.ttf.eot'),
+                  url('/assets/fonts/Playlist-Script.eot?#iefix') format('embedded-opentype');
             font-weight: normal;
             font-style: normal;
+            font-display: swap; /* Optional: Improves perceived performance */
         }
         .logo-text {
-            font-family: 'Playlist-Script';
+            /* Apply the custom font + fallback */
+            font-family: 'Playlist-Script', cursive;
             color: black;
+            /* Adjust font-size/line-height if needed for visual balance */
          }
+         /* --- END FONT PATH CORRECTION --- */
 
          /* This class seems unused in the provided HTML, but included for completeness */
          .cryptedmail:after {
             content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
           }
-         /* END: Styles previously in style.css */
+         /* END: Merged and Corrected Styles */
     </style>
 </head>
 <body class="bg-grey-light bg-opacity-75 md:text-5xl lg:text-xl"> <!-- Base font size set by body tag, Tailwind overrides where applied -->
@@ -105,11 +111,11 @@
     <nav class="z-10 bg-white fixed flex items-center justify-between w-full top-0 left-0 overflow-hidden shadow-md"> <!-- Added shadow -->
         <div class="flex items-center flex-no-shrink text-white mr-6">
             <a class="text-white no-underline hover:text-white hover:no-underline" href="https://www.printinghearts.nl">
-                <!-- Removed FontAwesome icon as it wasn't rendering without the library -->
+                <!-- Logo section -->
                 <span class="flex ml-1 mt-1 items-center text-4xl lg:text-6xl"> <!-- Adjusted size and alignment -->
-                        <span class="logo-text mr-2">Printing</span>
+                        <span class="logo-text mr-2">Printing</span> <!-- Apply custom font -->
                         <img src="assets/LOGO PNG TRANSPARANTE ACHTERGROND.png" class="h-16 lg:h-24 object-cover"/> <!-- Adjusted height -->
-                        <span class="logo-text ml-1">Hearts</span>
+                        <span class="logo-text ml-1">Hearts</span> <!-- Apply custom font -->
                     </span>
             </a>
         </div>
@@ -202,11 +208,6 @@
         <a name="reacties"></a>
         <div class="bg-red-700 text-2xl lg:text-3xl py-2 px-3 text-white uppercase w-auto rounded mb-4 inline-block">Reacties</div>
 
-        <!-- Optional Separator -->
-        <!-- <div class="mt-1 mb-2 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div> -->
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:py-4 lg:px-6 mb-6">
 
             <div class="border-2 border-red-700 rounded-lg shadow-xl p-4 bg-white bg-opacity-90"> <!-- Added background -->
@@ -274,11 +275,6 @@
             </div>
 
         </div>
-
-        <!-- Optional Separator -->
-        <!-- <div class="mt-1 mb-4 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div> -->
 
 
         <a name="informatie"></a>
@@ -368,10 +364,6 @@
 
         <a name="visie"></a>
         <div class="bg-red-700 text-2xl lg:text-3xl py-2 px-3 text-white uppercase w-auto rounded mb-4 inline-block">Visie</div>
-        <!-- Optional Separator -->
-        <!-- <div class="mt-1 mb-0 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div> -->
         <div class="lg:px-6 mb-6 bg-white bg-opacity-75 p-4 rounded space-y-4"> <!-- Added background, spacing -->
             <div>
                 <span class="font-bold">Werner:</span> "Printing❤️Hearts is spontaan ontstaan tussen
@@ -405,10 +397,6 @@
             </div>
         </div>
 
-        <!-- Optional Separator -->
-        <!-- <div class="mt-1 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div> -->
 
         <a name="wie-zijn-wij"></a>
         <div class="bg-red-700 text-2xl lg:text-3xl py-2 px-3 text-white uppercase w-auto rounded mb-4 inline-block">Wie zijn wij?</div>
