@@ -2,14 +2,36 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Printing❤️Hearts</title>
     <link rel="shortcut icon" href="/assets/LOGO PNG WITTE ACHTERGROND.png" type="image/x-icon"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="/assets/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- AOS (Animate On Scroll) library voor scroll animaties -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
-<body class="bg-gray-100 bg-opacity-75">
+<body class="bg-gray-100 bg-opacity-75 text-lg md:text-xl">
+<script>
+    // Initialiseer AOS (Animate On Scroll)
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Initialiseer SmoothScroll
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 800,
+            speedAsDuration: true,
+            easing: 'easeInOutCubic'
+        });
+    });
+</script>
 
 <div class="bg-white/10 flex flex-col" x-data="{ menu: false }">
 
@@ -131,70 +153,91 @@
     </nav>
 
     <!--Container-->
-    <main style="margin-top: 100px; max-width: 1080px;" class="flex-1 overflow-y-auto mx-auto z-0 px-4 lg:px-6 py-4">
+    <main class="flex-1 overflow-y-auto mx-auto z-0 px-4 lg:px-6 py-4 pt-32 md:pt-36 max-w-6xl">
 
-        <a name="welkom"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Welkom</div>
-        <div class="mb-4">
-            Wat leuk dat je onze website komt bezoeken! Naast dat je je kunt aanmelden voor het toerustingsweekend, vind je hier
-            meer achtergrond informatie over onze mooie organisatie, de visie, het programma en de locatie.
-        </div>
+        <section id="welkom" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Welkom
+            </div>
+            <div class="mb-8 text-xl md:text-2xl leading-relaxed">
+                Wat leuk dat je onze website komt bezoeken! Naast dat je je kunt aanmelden voor het toerustingsweekend, vind je hier
+                meer achtergrond informatie over onze mooie organisatie, de visie, het programma en de locatie.
+            </div>
+            <div class="flex justify-center">
+                <a href="#aanmelden" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg transform transition-transform hover:scale-105 duration-300 text-xl">
+                    Aanmelden
+                </a>
+            </div>
+        </section>
 
-        <a name="aanmelden"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Aanmelden</div>
-        
-        <div class="lg:py-4 lg:px-6">
-            <div class="border-gray-600 object-center inline-block border bg-white bg-opacity-50 p-3 my-2 w-full lg:w-1/2">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfL-f755tZWWE_c66tXEYHmdnsblob1Jf5vKJBPmudIX3FqjA/viewform"><img class="object-cover object-center bg-gray-400 w-full" src="/assets/thema.png"></a>
+        <section id="aanmelden" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Aanmelden
             </div>
-        
-            <div class="mb-0">Klik hieronder om naar het aanmeldingsformulier te gaan:</div>
-            <div class="mb-2 font-bold"><a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfL-f755tZWWE_c66tXEYHmdnsblob1Jf5vKJBPmudIX3FqjA/viewform">Aanmeldformulier</a>
-            </div>
-            <div class="mb-0">Heb je een vraag of een opmerking? Klik dan hieronder om naar het contactformulier te gaan:</div> 
-            <div class="mb-2 font-bold"><a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeenmvJJ_1sKlA35jZUmFtJFiR5K1rWLR3yUfi9Rsm8LPdZ7g/viewform">Contactformulier</a>
-            </div>
-        </div>
             
-        <a name="reacties"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Reacties</div>
-
-        <div class="mt-1 mb-2 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div>
+            <div class="lg:py-4 lg:px-6">
+                <div class="border-gray-600 object-center inline-block border bg-white bg-opacity-50 p-4 my-4 w-full lg:w-2/3 mx-auto shadow-xl rounded-lg transform transition-transform hover:scale-[1.01] duration-300">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfL-f755tZWWE_c66tXEYHmdnsblob1Jf5vKJBPmudIX3FqjA/viewform" class="block">
+                        <img class="object-cover object-center w-full rounded" src="/assets/thema.png">
+                    </a>
+                </div>
+            </div>
         
-        <div class="grid grid-cols-2 gap-4 lg:py-4 lg:px-6">         
-        
-            <div class="border-2 border-red-700 rounded-lg shadow-xl p-4">
-            <div class="mb-0 italic">
-                <span class="font-bold">Anne:</span> "Afgelopen weekend mocht ik een weekend met 
-                Printing❤️Hearts meemaken. Ik heb God heel dichtbij 
-                ervaren, heel veel knipogen van Hem gekregen. Wat ik zo 
-                bijzonder vind is hoe snel er een enorm veilige setting 
-                was en hoe verbonden ik me voelde met iedereen. Heerlijk 
-                over kerkmuren heen! Ik kon mezelf zijn, ik kan wel zeggen: 
-                ik heb mezelf en hoe ik bedoeld ben, weer een beetje teruggevonden. 
-                De strijd kwam na het weekend, dat is heel vervelend, 
-                maar ook een teken dat ik heel dichtbij God ben! En 
-                daar wil ik blijven, in Zijn schuilplaats, onder Zijn 
-                vleugels, geborgen in Zijn tent❤️"
+            <div class="text-xl mt-6 mb-2">Klik hieronder om naar het aanmeldingsformulier te gaan:</div>
+            <div class="mb-6 font-bold text-xl">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfL-f755tZWWE_c66tXEYHmdnsblob1Jf5vKJBPmudIX3FqjA/viewform" 
+                   class="text-red-700 hover:text-red-900 underline hover:no-underline transition-all duration-300">
+                   Aanmeldformulier
+                </a>
             </div>
+            <div class="text-xl mb-2">Heb je een vraag of een opmerking? Klik dan hieronder om naar het contactformulier te gaan:</div> 
+            <div class="mb-6 font-bold text-xl">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeenmvJJ_1sKlA35jZUmFtJFiR5K1rWLR3yUfi9Rsm8LPdZ7g/viewform"
+                   class="text-red-700 hover:text-red-900 underline hover:no-underline transition-all duration-300">
+                   Contactformulier
+                </a>
+            </div>
+        </section>
+            
+        <section id="reacties" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Reacties
             </div>
 
-            <div class="border-2 border-red-700 rounded-lg shadow-xl p-4">
-            <div class="mb-0 italic">
-                <span class="font-bold">Anoniem:</span> "Het afgelopen Printing❤️Hearts weekend ging over 'geborgenheid'. 
-                Ik vond het een heel intiem onderwerp en ik heb God 
-                van heel dichtbij ervaren. Het heeft mij geraakt; 
-                Gods spreken in de stilte met het Woord geopend. 
-                Om samen met mijn broers en zussen een weekend op te 
-                trekken in en rondom het klooster was werkelijk sprookjesachtig, 
-                maar toch realiteit. Gods Geest heeft ons de weg gewezen 
-                naar het leven vanuit verbondenheid met Hem en met elkaar."
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
-            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:py-4 lg:px-6">         
+            
+                <div class="border-2 border-red-700 rounded-lg shadow-xl p-6 bg-white/70 backdrop-blur-sm transform transition-transform hover:scale-[1.02] duration-300" data-aos="fade-right">
+                <div class="mb-0 italic text-lg md:text-xl leading-relaxed">
+                    <span class="font-bold text-red-700">Anne:</span> "Afgelopen weekend mocht ik een weekend met 
+                    Printing❤️Hearts meemaken. Ik heb God heel dichtbij 
+                    ervaren, heel veel knipogen van Hem gekregen. Wat ik zo 
+                    bijzonder vind is hoe snel er een enorm veilige setting 
+                    was en hoe verbonden ik me voelde met iedereen. Heerlijk 
+                    over kerkmuren heen! Ik kon mezelf zijn, ik kan wel zeggen: 
+                    ik heb mezelf en hoe ik bedoeld ben, weer een beetje teruggevonden. 
+                    De strijd kwam na het weekend, dat is heel vervelend, 
+                    maar ook een teken dat ik heel dichtbij God ben! En 
+                    daar wil ik blijven, in Zijn schuilplaats, onder Zijn 
+                    vleugels, geborgen in Zijn tent❤️"
+                </div>
+                </div>
+
+                <div class="border-2 border-red-700 rounded-lg shadow-xl p-6 bg-white/70 backdrop-blur-sm transform transition-transform hover:scale-[1.02] duration-300" data-aos="fade-left">
+                <div class="mb-0 italic text-lg md:text-xl leading-relaxed">
+                    <span class="font-bold text-red-700">Anoniem:</span> "Het afgelopen Printing❤️Hearts weekend ging over 'geborgenheid'. 
+                    Ik vond het een heel intiem onderwerp en ik heb God 
+                    van heel dichtbij ervaren. Het heeft mij geraakt; 
+                    Gods spreken in de stilte met het Woord geopend. 
+                    Om samen met mijn broers en zussen een weekend op te 
+                    trekken in en rondom het klooster was werkelijk sprookjesachtig, 
+                    maar toch realiteit. Gods Geest heeft ons de weg gewezen 
+                    naar het leven vanuit verbondenheid met Hem en met elkaar."
+                </div>
+                </div>
 
             <div class="border-2 border-red-700 rounded-lg shadow-xl p-4">
             <div class="mb-0 italic">
@@ -208,59 +251,74 @@
             </div>
             </div>
 
-            <div class="border-2 border-red-700 rounded-lg shadow-xl p-4">
-            <div class="mb-0 italic">
-                <span class="font-bold">Govert-Jan:</span> "Een Printing❤️Hearts weekend ervaar ik elke keer weer als 
-                een cadeau van God. Van te voren denk ik dat ik eigenlijk 
-                voor Hem tijd moet vrij maken. Het kost tijd en inspanning 
-                om alles te regelen en het voelt soms ook een beetje als 
-                opoffering voor Hem. Het tegenovergestelde is echter waar. 
-                In de rust van het weekend ervaar ik steeds meer dat het weekend 
-                een geschenk uit de Hemel is. Hij brengt me in de rust. 
-                Hij verkwikt mijn ziel. Hij geeft ontspanning. Hij raakt mij 
-                aan. Hij spreekt. Hij herstelt. Kortom: echt een cadeau 
-                van God. Ik denk dat God iedereen dat gunt en wil geven. Blessings!"
+                <div class="border-2 border-red-700 rounded-lg shadow-xl p-6 bg-white/70 backdrop-blur-sm transform transition-transform hover:scale-[1.02] duration-300" data-aos="fade-right">
+                <div class="mb-0 italic text-lg md:text-xl leading-relaxed">
+                    <span class="font-bold text-red-700">Marjolein:</span> "Wat een mooi weekend was dit! Ik ben echt bemoedigd en opgebouwd. 
+                    Het was zo fijn om met andere christenen samen te zijn en God te aanbidden. 
+                    Het programma was goed opgebouwd en de sfeer was heel goed. 
+                    Ik vond het fijn dat er ruimte was om met elkaar te delen en te bidden. 
+                    Ik heb echt Gods aanwezigheid ervaren dit weekend en ben dankbaar dat ik erbij mocht zijn."
+                </div>
+                </div>
+                <div class="border-2 border-red-700 rounded-lg shadow-xl p-6 bg-white/70 backdrop-blur-sm transform transition-transform hover:scale-[1.02] duration-300" data-aos="fade-left">
+                <div class="mb-0 italic text-lg md:text-xl leading-relaxed">
+                    <span class="font-bold text-red-700">Govert-Jan:</span> "Een Printing❤️Hearts weekend ervaar ik elke keer weer als 
+                    een cadeau van God. Van te voren denk ik dat ik eigenlijk 
+                    voor Hem tijd moet vrij maken. Het kost tijd en inspanning 
+                    om alles te regelen en het voelt soms ook een beetje als 
+                    opoffering voor Hem. Het tegenovergestelde is echter waar. 
+                    In de rust van het weekend ervaar ik steeds meer dat het weekend 
+                    een geschenk uit de Hemel is. Hij brengt me in de rust. 
+                    Hij verkwikt mijn ziel. Hij geeft ontspanning. Hij raakt mij 
+                    aan. Hij spreekt. Hij herstelt. Kortom: echt een cadeau 
+                    van God. Ik denk dat God iedereen dat gunt en wil geven. Blessings!"
+                </div>
+                </div>
+                <div class="border-2 border-red-700 rounded-lg shadow-xl p-6 bg-white/70 backdrop-blur-sm transform transition-transform hover:scale-[1.02] duration-300" data-aos="fade-right">
+                <div class="mb-0 italic text-lg md:text-xl leading-relaxed">
+                    <span class="font-bold text-red-700">Rutger:</span> "Wat fijn om dit Printing❤️Hearts weekend meegemaakt te hebben! Ik KWAM moegestreden 
+                    en overladen, ZAG en proefde van rust en OVERWON door niet langer 
+                    alleen maar met Hem de strijd te herpakken (Woorden van een grote 
+                    strijder: Julius Ceasar maar dan vanuit een christelijk perspectief)."
+                </div>
+                </div>
             </div>
-            </div>
-            <div class="border-2 border-red-700 rounded-lg shadow-xl p-4">
-            <div class="mb-0 italic">
-                <span class="font-bold">Rutger:</span> "Wat fijn om dit Printing❤️Hearts weekend meegemaakt te hebben! Ik KWAM moegestreden 
-                en overladen, ZAG en proefde van rust en OVERWON door niet langer 
-                alleen maar met Hem de strijd te herpakken (Woorden van een grote 
-                strijder: Julius Ceasar maar dan vanuit een christelijk perspectief)."
-            </div>
+        </section>
+
+        <section id="informatie" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Informatie
             </div>
             
-        </div>        
-
-        <div class="mt-1 mb-4 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div>
-
-        
-        <a name="informatie"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-2">Voor wie?</div>
-        <div class="lg:py-4 lg:px-6 mb-3">
-            <div class="mb-3">
-                We willen samen op zoek gaan naar datgene, wat Gods
-                wil is: terug naar de eerste Liefde, de hartsrelatie
-                tussen Hem en mensen herstellen. Zoals God met Adam
-                en Henoch wandelde, zo wil Hij dat ook met ons doen.
-                Hij wil een relatie van aangezicht tot aangezicht met
-                ons hebben, in Zijn rust en vrede, die ons menselijke
-                verstand te boven gaat. Dit willen we zoeken aan
-                de hand van een thema of sleutelvers vanuit de Bijbel.
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
-            <div class="mb-3">
-                Naast gebed, onderwijs en meditatieve momenten,
-                vinden we het belangrijk dat iedereen de ruimte krijgt
-                voor een stukje eigen bezinning in de vorm van stille
-                tijd, waarin deelnemers kunnen Bijbellezen, wandelen,
-                tekenen of schrijven. Dit proces begeleiden we door gesprekken 
-                met één van de echtparen. Deze gesprekken
-                worden ingepland. Natuurlijk kunnen deelnemers ook
-                altijd buiten de geplande gesprekken bij de echtparen
-                terecht met hun vragen.
+            
+            <div class="lg:py-4 lg:px-6">
+                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Voor wie?</div>
+                <div class="mb-6 text-lg md:text-xl leading-relaxed">
+                    We willen samen op zoek gaan naar datgene, wat Gods
+                    wil is: terug naar de eerste Liefde, de hartsrelatie
+                    met Hem. Dat is onze basis, ons fundament. Vanuit
+                    deze relatie willen we leven, en vanuit deze relatie
+                    willen we ook dit weekend samen optrekken. We
+                    geloven dat God tot iedereen wil spreken en dat Hij
+                    voor iedereen een plan heeft. Het weekend is voor
+                    iedereen die verlangt naar meer van God in zijn of
+                    haar leven. Verlang je naar meer van Zijn aanwezigheid
+                    en wil je Hem beter leren kennen? Dan is dit weekend
+                    voor jou!
+                </div>
+                <div class="mb-6 text-lg md:text-xl leading-relaxed">
+                    Naast gebed, onderwijs en meditatieve momenten,
+                    vinden we het belangrijk dat iedereen de ruimte krijgt
+                    voor een stukje eigen bezinning in de vorm van stille
+                    tijd, waarin deelnemers kunnen Bijbellezen, wandelen,
+                    tekenen of schrijven. Dit proces begeleiden we door gesprekken 
+                    met één van de echtparen. Deze gesprekken
+                    worden ingepland. Natuurlijk kunnen deelnemers ook
+                    altijd buiten de geplande gesprekken bij de echtparen
+                    terecht met hun vragen.
             </div>
             <div>
                 Het is voor iedereen vanaf 21 jaar, die tijd apart wil zetten
@@ -280,47 +338,70 @@
             </div>
         </div>
 
-        <a name="programma"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-2">Programma</div>
-        <div class="mb-4 lg:py-4 lg:px-6">
-            <div class="font-bold">Vrijdagavond</div>
-            <div class="mb-2">Na de broodmaaltijd hebben we een gezamenlijk programma
-                met een creatief moment als inleiding op het thema.
+        <section id="programma" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Programma
             </div>
-            <div class="font-bold">Zaterdag</div>
-            <div class="mb-2">Na het ontbijt is er een inleiding op het thema. Na de overdenking is er ruimte voor een begeleidingsgesprek. Daarna heb je tijd om op je eigen manier God te zoeken. Vervolgens eten we met elkaar een warme maaltijd. Na wat tijd om te ontspannen, gaan we een korte wandeling maken waarbij we een Bijbeltekst gaan overdenken. 's Avonds hebben we een creatieve verwerking van het thema.
+            
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
             </div>
-            <div class="font-bold">Zondag</div>
-            <div class="mb-0">Na het ontbijt hebben we weer tijd om God te zoeken en is er ruimte voor de begeleidingsgesprekken. Aan het einde van de ochtend hebben we met elkaar een meditatief moment. Nadat we weer kunnen genieten van een warme maaltijd met elkaar, hebben we een samenkomst met getuigenissen. Daarna sluiten we het weekend samen af.
+            
+            <div class="mb-8 lg:py-4 lg:px-6">
+                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Vrijdagavond</div>
+                <div class="mb-6 text-lg md:text-xl leading-relaxed">Na de broodmaaltijd hebben we een gezamenlijk programma
+                    met een creatief moment als inleiding op het thema.
+                </div>
+                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Zaterdag</div>
+                <div class="mb-6 text-lg md:text-xl leading-relaxed">Na het ontbijt is er een inleiding op het thema. Na de overdenking is er ruimte voor een begeleidingsgesprek. Daarna heb je tijd om op je eigen manier God te zoeken. Vervolgens eten we met elkaar een warme maaltijd. Na wat tijd om te ontspannen, gaan we een korte wandeling maken waarbij we een Bijbeltekst gaan overdenken. 's Avonds hebben we een creatieve verwerking van het thema.
+                </div>
+                <div class="font-bold text-2xl md:text-3xl mb-4 text-red-700">Zondag</div>
+                <div class="mb-6 text-lg md:text-xl leading-relaxed">Na het ontbijt hebben we weer tijd om God te zoeken en is er ruimte voor de begeleidingsgesprekken. Aan het einde van de ochtend hebben we met elkaar een meditatief moment. Nadat we weer kunnen genieten van een warme maaltijd met elkaar, hebben we een samenkomst met getuigenissen. Daarna sluiten we het weekend samen af.
+                </div>
             </div>
-        </div>
+        </section>
 
-        <a name="kosten"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-1 lg:py-2 px-2 lg:px-3 text-white uppercase w-auto rounded mb-2">Kosten</div>
-        <div class="lg:py-2 lg:px-6">
-            De kosten zijn 
-            <A class="font-bold">€160,- euro p.p.</A>.
-            Hiervoor krijg je een eigen slaapkamer,
-            koffie / thee / limonade en drie maaltijden per
-            dag. De warme maaltijd wordt 's middags geserveerd.
-            Om de prijzen laag te houden, doen we met
-            elkaar een aantal corvee taken. 
-        </div>
-        <div class="lg:py-2 lg:px-6">
-            Wanneer dit bedrag te hoog voor je is, dan mag je
-            daarover contact met ons opnemen. We gaan dan zoeken naar een oplossing. 
-            Je kunt ons bereiken via het contactformulier:
-            <div class="mb-2 font-bold"><a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeenmvJJ_1sKlA35jZUmFtJFiR5K1rWLR3yUfi9Rsm8LPdZ7g/viewform">Contactformulier</a>
+        <section id="kosten" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Kosten
             </div>
-        </div>
+            
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
+            </div>
+            
+            <div class="lg:py-4 lg:px-6 mb-6 text-lg md:text-xl leading-relaxed">
+                De kosten zijn 
+                <span class="font-bold text-red-700 text-2xl">€160,- euro p.p.</span>
+                Hiervoor krijg je een eigen slaapkamer,
+                koffie / thee / limonade en drie maaltijden per
+                dag. De warme maaltijd wordt 's middags geserveerd.
+                Om de prijzen laag te houden, doen we met
+                elkaar een aantal corvee taken. 
+            </div>
+            <div class="lg:py-4 lg:px-6 text-lg md:text-xl leading-relaxed">
+                Wanneer dit bedrag te hoog voor je is, dan mag je
+                daarover contact met ons opnemen. We gaan dan zoeken naar een oplossing. 
+                Je kunt ons bereiken via het contactformulier:
+                <div class="mt-4 mb-6 font-bold text-xl">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeenmvJJ_1sKlA35jZUmFtJFiR5K1rWLR3yUfi9Rsm8LPdZ7g/viewform"
+                       class="text-red-700 hover:text-red-900 underline hover:no-underline transition-all duration-300">
+                       Contactformulier
+                    </a>
+                </div>
+            </div>
+        </section>
 
-        <a name="visie"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Visie</div>
-        <div class="mt-1 mb-0 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div>
-        <div class="lg:px-6 mb-4">
+        <section id="visie" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Visie
+            </div>
+            
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
+            </div>
+            
+            <div class="lg:px-6 mb-6 text-lg md:text-xl leading-relaxed">
             <span class="font-bold">Werner:</span> "Printing❤️Hearts is spontaan ontstaan tussen
             God en mij op één van mijn stilteretraites in Helvoirt.
             Tijdens een wandeling in de ochtendluwte werd ik in
@@ -351,13 +432,18 @@
             God en elkaar ontmoeten."
         </div>
  
-        <div class="mt-1 object-center">
-            <img src="/assets/horizontalelijn.svg">
-        </div>
+        </section>
 
-        <a name="wie-zijn-wij"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Wie zijn wij?</div>
-        <div class="mb-4 lg:py-4 lg:px-6">
+        <section id="wie-zijn-wij" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Wie zijn wij?
+            </div>
+            
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
+            </div>
+            
+            <div class="mb-8 lg:py-4 lg:px-6 text-lg md:text-xl leading-relaxed">
         
         
             <div class="font-bold">WERNER & HANNEKE</div>
@@ -402,29 +488,66 @@
             </div>
 
         </div>
-        <a name="folder"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Digitale Folder</div>
-        <div class="mt-4 mb-4 lg:py-2 lg:px-6">
-             Wilt u alles nog eens rustig nalezen? Download dan onze <A class="font-bold" href="https://www.printinghearts.nl/folder/folder.pdf">digitale folder</A>.
-        </div>
+        </section>
 
-        <a name="contact"></a>
-        <div class="bg-red-700 text-6xl lg:text-2xl py-2 px-3 text-white uppercase w-auto rounded mb-4">Contact</div>
-        <div class="mt-4 lg:px-6">
-             Heeft uw vragen en/of opmerkingen, klik dan hieronder voor ons contactformulier:
-        </div>
-        <div class="mb-2 font-bold lg:px-6"><a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeenmvJJ_1sKlA35jZUmFtJFiR5K1rWLR3yUfi9Rsm8LPdZ7g/viewform">Contactformulier</a>
-        </div>
+        <section id="folder" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Digitale Folder
+            </div>
+            
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
+            </div>
+            
+            <div class="mt-4 mb-8 lg:py-4 lg:px-6 text-lg md:text-xl leading-relaxed">
+                Wilt u alles nog eens rustig nalezen? Download dan onze 
+                <a class="font-bold text-red-700 hover:text-red-900 underline hover:no-underline transition-all duration-300" href="https://www.printinghearts.nl/folder/folder.pdf">
+                    digitale folder
+                </a>.
+            </div>
+        </section>
+
+        <section id="contact" class="min-h-screen flex flex-col justify-center py-16 md:py-24" data-aos="fade-up">
+            <div class="bg-red-700 text-4xl md:text-5xl py-3 px-4 text-white uppercase w-auto rounded mb-6 shadow-lg transform transition-transform hover:scale-[1.01] duration-300">
+                Contact
+            </div>
+            
+            <div class="mt-4 mb-8 object-center">
+                <img src="/assets/horizontalelijn.svg" class="w-full max-w-3xl mx-auto">
+            </div>
+            
+            <div class="mt-4 mb-4 lg:py-2 lg:px-6 text-lg md:text-xl leading-relaxed">
+                Heeft u vragen en/of opmerkingen? Klik dan hieronder voor ons contactformulier:
+            </div>
+            <div class="mb-8 font-bold lg:px-6 text-xl">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeenmvJJ_1sKlA35jZUmFtJFiR5K1rWLR3yUfi9Rsm8LPdZ7g/viewform"
+                   class="text-red-700 hover:text-red-900 underline hover:no-underline transition-all duration-300">
+                   Contactformulier
+                </a>
+            </div>
+        </section>
      
     </main>
 </div>
 
 <script>
-    //Javascript to toggle the menu
-    // document.getElementById('nav-toggle').onclick = function () {
-    //     document.getElementById("nav-content").classList.toggle("hidden");
-    // }
+    // Initialiseer AOS opnieuw bij window resize voor betere responsiveness
+    window.addEventListener('resize', function() {
+        AOS.refresh();
+    });
+    
+    // Smooth scroll naar secties wanneer op menu-items wordt geklikt
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            // Sluit het menu als het open is (voor mobiel)
+            if (window.innerWidth < 1024) {
+                const menuToggle = document.querySelector('[x-data]').__x.$data;
+                if (menuToggle && menuToggle.menu) {
+                    menuToggle.menu = false;
+                }
+            }
+        });
+    });
 </script>
 
 </body>
